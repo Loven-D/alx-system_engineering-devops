@@ -1,0 +1,1 @@
+This task is to teach how to connect to a server.
