@@ -1,10 +1,7 @@
-#!/bin/bash
-
-# Update package list and install nginx with the -y flag
-sudo apt-get update
-sudo apt-get install -y nginx
-
-# Create a default index.html file with "Hello World!"
-echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-
-sudo service nginx restart
+#!/usr/bin/env bash
+# Install nginx and start it
+apt-get -y install nginx
+service nginx start
+ufw allow 'Nginx HTTP'
+echo "Holberton School\n" | sudo tee /var/www/html/index.nginx-debian.html
+service nginx restart

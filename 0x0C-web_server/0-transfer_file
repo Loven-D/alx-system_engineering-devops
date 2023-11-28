@@ -1,8 +1,6 @@
-#!/bin/bash
-
-#Transfer file `file` to a server
+# Transfer file `file` to a server
 #scp /path/to/file username@a:/path/to/destination
-# Handcoded: scp -i ~/.ssh/school README.md ubuntu@54.175.223.32:/tmp
+# Handcoded: scp -i ~/.ssh/id_rsa README.md ubuntu@54.175.223.32:/tmp
 
 #If number of arguments is >= 3
 if [ $# -ge 3 ]
