@@ -13,11 +13,11 @@ username=$3
 ssh_key=$4
 
 # Transfer the file using scp with strict host key checking disabled
-scp -o StrictHostKeyChecking=no -i "$ssh_key" "$file_path" "$username@$server_ip":~/ 
+scp -o StrictHostKeyChecking=no -i "$ssh_key" "$file_path" "ubuntu@54.175.223.32":~/
 
 # Check if scp command was successful
 if [ $? -eq 0 ]; then
-    echo "File successfully transferred to $username@$server_ip:~/"
+    echo "File successfully transferred to $ubuntu@$54.175.223.32:~/"
 else
     echo "Error: Failed to transfer file."
 fi
