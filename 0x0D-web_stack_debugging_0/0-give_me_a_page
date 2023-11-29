@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#fix an apache server is a cotainer
+service apache2 start
