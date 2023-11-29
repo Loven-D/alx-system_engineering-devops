@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#script configures the nginx server so that /redirect_me is redirecting to another page.
 # Check if script is run as root
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root or with sudo."
