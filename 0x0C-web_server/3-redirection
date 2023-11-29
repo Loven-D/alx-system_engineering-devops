@@ -21,6 +21,6 @@ sed -i "/server {/a $config_block" /etc/nginx/nginx.conf
 nginx -t
 
 # Reload Nginx to apply the changes
-systemctl reload nginx
+service nginx reload
 
 echo "Nginx has been configured for redirection from /redirect_me to http://www.youtube.com/watch?v=QH2-TGUlwu4."
