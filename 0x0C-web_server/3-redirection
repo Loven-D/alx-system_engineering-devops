@@ -14,7 +14,7 @@ config_block="location /redirect_me {
 }"
 
 # Add the redirection configuration block to Nginx configuration
-sed -i "/server {/a $config_block" /etc/nginx/nginx.conf
+sed -i "/server /a $config_block" /etc/nginx/nginx.conf
 
 # Test Nginx configuration
 nginx -t
