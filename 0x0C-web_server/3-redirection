@@ -1,18 +1,26 @@
-#!/usr/bin/env bash
-# Install nginx and start it
-apt-get -y install nginx
+#!/bin/bash
 
-# Firewall setting: Allow Nginx to serve on HTTP
-ufw allow 'Nginx HTTP'
+# Check if script is run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root or with sudo."
+    exit 1
+fi
 
-# Override the default index file served as home page
-echo "Holberton School" >> /var/www/html/index.html
+# Backup the default Nginx configuration file
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 
-#Give the user  ownership to website files
-sudo chown -R $USER:$USER /var/www/html
-sudo chmod -R 755 /var/www
+# Define the redirection configuration block
+config_block="location /redirect_me {
+    return 301 http://www.youtube.com/watch?v=QH2-TGUlwu4;
+}"
 
-# Redirect to /redirect_me to a youtube video
-sed -i '37i\rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+# Add the redirection configuration block to Nginx configuration
+sed -i "/server {/a $config_block" /etc/nginx/nginx.conf
 
-service nginx start
+# Test Nginx configuration
+nginx -t
+
+# Reload Nginx to apply the changes
+systemctl reload nginx
+
+echo "Nginx has been configured for redirection from /redirect_me to http://www.youtube.com/watch?v=QH2-TGUlwu4."
