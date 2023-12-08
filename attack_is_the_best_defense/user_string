@@ -1,0 +1,82 @@
+/lib64/ld-linux-x86-64.so.2
+",6C
+libc.so.6
+exit
+sprintf
+__isoc99_sscanf
+time
+__stack_chk_fail
+getpid
+strdup
+calloc
+strlen
+memset
+__errno_location
+memcmp
+putenv
+memcpy
+malloc
+getenv
+stderr
+execvp
+fwrite
+fprintf
+atoll
+strerror
+__libc_start_main
+__environ
+__xstat
+__gmon_start__
+GLIBC_2.7
+GLIBC_2.14
+GLIBC_2.4
+GLIBC_2.2.5
+UH- $`
+UH- $`
+ATSH
+[A\]
+[]A\A]A^A_
+x%lx
+=%lu %d
+%lu %d%c
+E: neither argv[0] nor $_ works.
+<null>
+%s%s%s: %s
+;*3$"
+#+aIN_
+p.=m
+0-mzs2
+9ll!
+p{WBs
+_BYnF
+QM"d;
+,l8,
+HXqF
+GCC: (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+GCC: (Ubuntu 4.8.2-19ubuntu1) 4.8.2
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.dynamic
+.got
+.got.plt
+.data
+.bss
+.comment
